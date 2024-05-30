@@ -1,5 +1,5 @@
 import Pokemon from "@/model/pokemon";
-import { Row, Col, Container, Image } from 'react-bootstrap';
+import { Row, Col, Container, Image, ListGroup } from 'react-bootstrap';
 
 
 type Props = {
@@ -24,6 +24,20 @@ export default function PokemonComponent(props: Props) {
                     Pokémon Properties
                 </Col>
             </Row>
+            <ListGroup className="list-group-flush">
+                <ListGroup.Item>
+                    <p>Attack</p>
+                    {pokemon.attack}
+                </ListGroup.Item>
+                <ListGroup.Item>
+                    <p>Defense</p>
+                    {pokemon.defense}
+                </ListGroup.Item>
+                <ListGroup.Item>
+                    <p>Health</p>
+                    {pokemon.healthPoints}
+                </ListGroup.Item>
+            </ListGroup>
         </Container>
     );
 }
